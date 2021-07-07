@@ -156,7 +156,9 @@ header {
 .header-address .header-link:focus {
   color: var(--extra-blue-color);
 }
-/* не розумію чому не працює */
+a {
+  position: relative;
+}
 .active::after {
   content: "";
   display: block;
@@ -721,7 +723,8 @@ img {
   cursor: pointer;
 }
 .modal-form-title {
-  margin: 40px 40px 30px 40px;
+  margin: 0;
+  margin-bottom: 12px;
   font-weight: bold;
   font-size: 20px;
   line-height: 1.15;
@@ -739,19 +742,102 @@ img {
 .modal-form-input {
   width: 100%;
   height: 40px;
-  margin-bottom: 28px;
+  margin-top: 4px;
+  margin-bottom: 10px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 14px 15px;
+}
+
+.form-text {
+  width: 100%;
+  height: 120px;
+  resize: none;
+  margin-top: 4px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 12px 16px;
 }
 
 .modal-form-field {
+  position: relative;
   font-weight: normal;
   font-size: 12px;
   line-height: 1.1;
   letter-spacing: 0.01em;
-
   color: var(--secondary-text-color);
+}
+
+.modal-form-field-icon {
+  position: relative;
+}
+
+.icon-human,
+.icon-mobile,
+.icon-post {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  left: 12px;
+  bottom: 20px;
+}
+
+.form-check-policy {
+  font-size: 14px;
+  line-height: 1.71px;
+  margin-bottom: 30px;
+  margin: 0 auto;
+}
+.form-check-policy::before {
+  content: " ";
+  width: 16px;
+  height: 15px;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: inline-block;
+  border-radius: 4px;
+  margin-right: 8px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.fmodal-form-check:checked + .form-check-policy::before {
+  background-image: url(../images/svg-images/check-icon.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color: var(--extra-blue-color);
+  border-color: var(--extra-blue-color);
+}
+.form-button {
+  align-self: center;
+  width: 200px;
+  height: 50px;
+  padding: 10px 55px;
+  background-color: var(--extra-blue-color);
+  color: var(--main-white-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: transparent;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1, 88;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  margin-top: 30px;
+}
+.form-check-policy a {
+  color: var(--extra-blue-color);
 }
