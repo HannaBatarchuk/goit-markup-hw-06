@@ -802,6 +802,11 @@ img {
 }
 .modal-form-head {
   margin-bottom: 4px;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: var(--secondary-text-color);
 }
 .modal-form-input {
   width: 100%;
